@@ -1,0 +1,215 @@
+:root {
+  --background: #000000;
+  --text: #ffffff;
+  --green: #00ff88;
+  --glow: 0 0 10px var(--green), 0 0 20px var(--green);
+  --shadow: 0 0 30px var(--green);
+  --dim-glow: 0 0 6px #007a55;
+  --border: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  text-shadow: var(--glow);
+}
+
+header {
+  background: #0a0a0a;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+nav h1 {
+  font-size: 24px;
+  color: var(--green);
+  text-shadow: var(--glow);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: var(--text);
+  text-shadow: var(--dim-glow);
+}
+
+.hero {
+  margin-top: 30px;
+  text-shadow: var(--dim-glow);
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid var(--green);
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--green);
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: var(--green);
+  text-shadow: var(--glow);
+}
+
+.highlight {
+  color: var(--green);
+  text-shadow: var(--glow);
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--text);
+  text-shadow: var(--dim-glow);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: var(--dim-glow);
+}
+
+.btn:hover {
+  background: var(--green);
+  color: black;
+  box-shadow: var(--glow);
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-shadow: var(--dim-glow);
+}
+
+.ascii-title {
+  color: var(--green);
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-shadow: var(--glow);
+}
+
+.code-block {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Courier New', monospace;
+  box-shadow: var(--shadow);
+  border-left: 3px solid var(--green);
+}
+
+.tag {
+  color: #ccc;
+}
+
+.value {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-list li {
+  list-style: none;
+  background: #111;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: var(--dim-glow);
+}
+
+.skills-list li:hover {
+  background: var(--green);
+  color: black;
+  box-shadow: var(--glow);
+}
+
+.project {
+  background: #111;
+  padding: 20px;
+  border-left: 4px solid var(--green);
+  margin-bottom: 25px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: var(--dim-glow);
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glow);
+}
+
+footer {
+  background: #0a0a0a;
+  color: var(--text);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  box-shadow: inset 0 0 10px var(--green);
+}
+
+.cursor {
+  color: var(--green);
+  font-weight: bold;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
